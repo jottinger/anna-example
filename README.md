@@ -2,14 +2,18 @@
 
 You can run this a lot of ways:
 
-<pre>mvn package dependency:copy-dependencies
+<pre>mvn package dependency:copy-dependencies</pre>
 
-# then one of...
-java -cp "target/dependency/*;target/original-anna-example-1.0-SNAPSHOT.jar" com.autumncode.annaexample.App`
+then one of these:
 
-#or
-mvn package exec:java
+Windows: <code>java -cp "target/dependency/*;target/original-anna-example-1.0-SNAPSHOT.jar" com.autumncode.annaexample.App</code>
 
-#or
+Non-Windows: <code>java -cp "target/dependency/*:target/original-anna-example-1.0-SNAPSHOT.jar" com.autumncode.annaexample.App</code>
 
-java -jar target/anna-example-1.0-SNAPSHOT.jar<pre>
+or
+
+<pre>mvn package exec:java</pre>
+
+or
+
+<pre>java -jar target/anna-example-1.0-SNAPSHOT.jar<pre>
